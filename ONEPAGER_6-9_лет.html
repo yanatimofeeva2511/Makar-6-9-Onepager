@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6–9 лет | One-Pager</title>
+    <style>
+        :root {
+            --bg: #fafbfc;
+            --card: #fff;
+            --border: #e1e4e8;
+            --accent: #0969da;
+            --accent-soft: #ddf4ff;
+            --green: #1a7f37;
+            --green-soft: #dafbe1;
+            --orange: #bf8700;
+            --orange-soft: #fff8c5;
+            --red-soft: #ffebe9;
+            --text: #1f2328;
+            --muted: #656d76;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; font-size: 14px; padding: 16px; }
+        h1 { font-size: 1.5rem; margin-bottom: 4px; color: var(--text); }
+        .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; }
+        section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+        section h2 { font-size: 1rem; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); color: var(--accent); }
+        table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+        th { background: var(--bg); font-weight: 600; color: var(--muted); }
+        .slot-time { white-space: nowrap; font-weight: 500; color: var(--muted); }
+        ul { padding-left: 18px; margin: 6px 0; }
+        li { margin: 2px 0; }
+        .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .col { min-width: 0; }
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 600; margin-right: 6px; margin-bottom: 4px; }
+        .tag--phys { background: var(--green-soft); color: var(--green); }
+        .tag--cog { background: var(--accent-soft); color: var(--accent); }
+        .do { color: var(--green); }
+        .dont { color: #cf222e; }
+        .checklist { list-style: none; padding-left: 0; }
+        .checklist li { padding: 6px 0; padding-left: 24px; position: relative; border-bottom: 1px solid var(--border); }
+        .checklist li:last-child { border-bottom: none; }
+        .checklist li::before { content: '☐'; position: absolute; left: 0; font-size: 16px; }
+        .reminder-box { background: var(--orange-soft); border: 1px solid #f0c14b; border-radius: 8px; padding: 12px; margin-top: 8px; }
+        .reminder-box ul { margin: 0; padding-left: 18px; }
+        .slot-phys { background: #dafbe1 !important; }
+        .slot-cog { background: #ddf4ff !important; }
+        .slot-home { background: #fff8c5 !important; }
+        .legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; font-size: 12px; color: var(--muted); }
+        .legend span { display: inline-flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 14px; height: 14px; border-radius: 4px; }
+        .block-academic { font-size: 0.9rem; color: var(--muted); }
+        .block-academic h4 { color: var(--muted); font-weight: 600; }
+        @media print {
+            body { background: #fff; padding: 12px; }
+            section { break-inside: avoid; box-shadow: none; }
+            .no-print { display: none !important; }
+        }
+        .btn-pdf { position: fixed; top: 12px; right: 12px; z-index: 100; padding: 10px 16px; background: var(--accent); color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+        .btn-pdf:hover { filter: brightness(1.05); }
+        @media (max-width: 768px) { .grid2 { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <button type="button" class="btn-pdf no-print" onclick="window.print()" title="Откроется диалог печати: выберите «Сохранить как PDF»">Сохранить как PDF</button>
+
+    <h1>6–9 лет: неделя и опоры</h1>
+    <p class="subtitle">Базовые принципы, расписание по слотам, допзанятия, дом, памятка, чек-лист динамики</p>
+
+    <!-- 0. БАЗОВЫЕ ПРИНЦИПЫ ПОСТРОЕНИЯ НЕДЕЛИ -->
+    <section>
+        <h2>0. Базовые принципы: как строить неделю</h2>
+        <p style="margin-bottom: 12px; color: var(--muted); font-size: 12px;">Эти правила задают рамку для любых слотов и занятий.</p>
+        <ul>
+            <li><strong>Сон.</strong> Стабильный, в одно и то же время. С вечера до 08:00 утра (не менее 10–11 часов).</li>
+            <li><strong>Экран.</strong> Не больше 1 часа в день. Только два периода по 30 минут. Только вечером, в окне 17:00–19:30 (например 17:00–17:30 и 18:00–18:30 или 18:00–18:30 и 19:00–19:30).</li>
+            <li><strong>Физнагрузка.</strong> Минимум 3 раза в неделю (через день). Бассейн, йога, футбол в мягкой среде и т.п.</li>
+            <li><strong>Без перегруза.</strong> Не больше 3 организованных занятий в день (школа считается за одно). Остальное — отдых, домашнее время, свободная игра.</li>
+            <li><strong>Внешняя социализация.</strong> Не реже одного раза в месяц — хотя бы одно из четырёх: поход в театр/музей/поездка; поход в гости; встреча/общение с кем-то (друг, родственник); пригласить кого-то в гости.</li>
+        </ul>
+    </section>
+
+    <!-- 1. РАСПИСАНИЕ НЕДЕЛИ ПО ВРЕМЕННЫМ СЛОТАМ -->
+    <section>
+        <h2>1. Неделя по временным слотам</h2>
+        <p style="margin-bottom: 10px; color: var(--muted); font-size: 12px;">Пн–Пт: школа 8:30–12:30. Зелёный — физические занятия, синий — когнитивные, жёлтый — домашнее время (игры, экран до 1 ч и т.д.).</p>
+        <div style="overflow-x: auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Время</th>
+                        <th>Пн</th>
+                        <th>Вт</th>
+                        <th>Ср</th>
+                        <th>Чт</th>
+                        <th>Пт</th>
+                        <th>Сб</th>
+                        <th>Вс</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="slot-time">07:30–08:30</td><td>Подъём и завтрак</td><td>Подъём и завтрак</td><td>Подъём и завтрак</td><td>Подъём и завтрак</td><td>Подъём и завтрак</td><td>Подъём и завтрак</td><td>Подъём и завтрак</td></tr>
+                    <tr><td class="slot-time">08:30–12:30</td><td class="slot-cog">Школа</td><td class="slot-cog">Школа</td><td class="slot-cog">Школа</td><td class="slot-cog">Школа</td><td class="slot-cog">Школа</td><td class="slot-home">Выходной</td><td class="slot-home">Выходной</td></tr>
+                    <tr><td class="slot-time">12:30–15:30</td><td>Обед, отдых</td><td>Обед, отдых</td><td>Обед, отдых</td><td>Обед, отдых</td><td>Обед, отдых</td><td class="slot-home">Выходной</td><td class="slot-home">Выходной</td></tr>
+                    <tr><td class="slot-time">15:30–17:00</td><td>Тихий досуг, игры</td><td>Тихий досуг, игры</td><td>Тихий досуг, игры</td><td>Тихий досуг, игры</td><td>Тихий досуг, игры</td><td class="slot-home">Выходной</td><td class="slot-home">Выходной</td></tr>
+                    <tr>
+                        <td class="slot-time">17:00–18:00</td>
+                        <td class="slot-cog"><strong>Столярка</strong></td>
+                        <td class="slot-phys">Слот: спорт</td>
+                        <td class="slot-cog"><strong>Столярка</strong></td>
+                        <td class="slot-home">Домашнее время, игры, экран 2×30 мин</td>
+                        <td class="slot-cog">Слот (когнитив.)</td>
+                        <td class="slot-phys"><strong>Футбол</strong></td>
+                        <td class="slot-home">Выходной</td>
+                    </tr>
+                    <tr>
+                        <td class="slot-time">18:30–20:00</td>
+                        <td class="slot-home">Домашнее время, игры, экран 2×30 мин</td>
+                        <td class="slot-home">Домашнее время, игры, экран 2×30 мин</td>
+                        <td class="slot-home">Домашнее время, игры, экран 2×30 мин</td>
+                        <td class="slot-phys"><strong>Футбол</strong></td>
+                        <td class="slot-home">Домашнее время, игры, экран 2×30 мин</td>
+                        <td class="slot-home">Выходной</td>
+                        <td class="slot-home">Выходной</td>
+                    </tr>
+                    <tr><td class="slot-time">20:00–21:30</td><td>Ужин, ритуал ко сну</td><td>Ужин, ритуал ко сну</td><td>Ужин, ритуал ко сну</td><td>Ужин, ритуал ко сну</td><td>Ужин, ритуал ко сну</td><td>Ужин, ритуал ко сну</td><td>Ужин, ритуал ко сну</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="legend">
+            <span><span class="legend-dot" style="background:#dafbe1;"></span> Физические (минимум 3× в неделю)</span>
+            <span><span class="legend-dot" style="background:#ddf4ff;"></span> Когнитивные</span>
+            <span><span class="legend-dot" style="background:#fff8c5;"></span> Домашнее время (игры, экран до 1 ч)</span>
+        </div>
+    </section>
+
+    <!-- 2. ДОПЗАНЯТИЯ: ФИЗИЧЕСКИЕ И КОГНИТИВНЫЕ -->
+    <section>
+        <h2>2. Варианты допзанятий</h2>
+        <div class="grid2">
+            <div class="col">
+                <h3 style="font-size: 0.95rem; margin-bottom: 8px;">Физические</h3>
+                <ul>
+                    <li><span class="tag tag--phys">приоритет</span> Бассейн 2× в неделю</li>
+                    <li><span class="tag tag--phys">приоритет</span> Йога / координация (без соревнований)</li>
+                    <li><span class="tag tag--phys">вариант</span> Футбол (мягкая среда, без рейтингов)</li>
+                    <li>Детский фитнес без рейтингов</li>
+                    <li>Айкидо, ушу (мягкие единоборства)</li>
+                    <li>Плавание в море/озере летом</li>
+                    <li>Аквапарк + домашняя гимнастика</li>
+                </ul>
+                <p style="font-size: 12px; color: var(--muted); margin-top: 8px;">Нельзя: командные виды с конкуренцией, соревновательные секции, карате (агрессивный стиль), таблицы лидеров.</p>
+            </div>
+            <div class="col">
+                <h3 style="font-size: 0.95rem; margin-bottom: 8px;">Когнитивные / творческие</h3>
+                <ul>
+                    <li><span class="tag tag--cog">приоритет</span> Английский (2–3× в неделю, 1:1, без давления; к 9 годам 40–45 мин)</li>
+                    <li><span class="tag tag--cog">приоритет</span> Лего-инженерия / архитектурное моделирование</li>
+                    <li><span class="tag tag--cog">приоритет</span> Рисование концептов (миры, карты, города)</li>
+                    <li><span class="tag tag--cog">вариант</span> Столярка (детская мастерская)</li>
+                    <li>Робототехника уровня «0–1»</li>
+                    <li>Scratch, логические игры</li>
+                    <li>Керамика, графика на планшете</li>
+                    <li>Студия рисования без конкурсов, комиксы</li>
+                    <li>Театральная студия (импровизация, без жёсткого отбора)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ЗАНЯТИЯ ДОМА -->
+    <section>
+        <h2>3. Варианты занятий дома</h2>
+        <h3 style="font-size: 0.95rem; margin: 0 0 8px;">Регулярные занятия</h3>
+        <ul>
+            <li>Лего, конструкторы (Lego Technic, магнитные, дерево) — «построй», «создай»</li>
+            <li>Рисование концептов: миры, карты, города на бумаге или планшете</li>
+            <li>Мини-проекты с ИИ (до 10 мин): «придумай город», «объясни, почему», «нарисуй персонажа», карты локаций</li>
+            <li>Настолки, игры «придумай 3 способа», задачи в 2 шага</li>
+            <li>Книги «почему так устроено», пересказ, эксперименты (пробуем → смотрим → меняем)</li>
+            <li>Мультики и игры на английском (ежедневно по возможности)</li>
+            <li>Тихие ритуалы: карты эмоций на стене, место для «строительства миров», личная территория</li>
+            <li>Домашняя столярка / поделки из дерева, картона, бумаги (под присмотром)</li>
+            <li>Свободная игра без экрана: конструктор, сюжетные игры, «строительство миров»</li>
+            <li>Аудиокниги и подкасты на русском и английском</li>
+            <li>Спокойные настольные игры в кругу семьи (без жёсткого соревнования)</li>
+        </ul>
+        <h3 style="font-size: 0.95rem; margin: 16px 0 8px;">Социализация</h3>
+        <p style="font-size: 12px; color: var(--muted); margin-bottom: 6px;">Не реже одного раза в месяц — одно из четырёх:</p>
+        <ul>
+            <li>Поход в театр, музей или поездка</li>
+            <li>Поход в гости</li>
+            <li>Встреча / общение с кем-то (друг, родственник)</li>
+            <li>Пригласить кого-то в гости</li>
+        </ul>
+    </section>
+
+    <!-- 4. ПАМЯТКА ДЛЯ РОДИТЕЛЕЙ -->
+    <section>
+        <h2>4. Памятка: поведение с ребёнком</h2>
+        <div class="reminder-box">
+            <strong>Как говорить и вести себя</strong>
+            <ul>
+                <li>Не «молодец», а «ты старался», «ты придумал» — не оценивать личность</li>
+                <li>Говорить свои границы спокойно: «я занят(а) 10 минут», «мне нужно побыть одному/одной»</li>
+                <li>Единые правила и ритуалы (сон, экран, занятия) — ребёнок опирается на предсказуемость</li>
+                <li>Не сравнивать с другими детьми и ни с кем</li>
+                <li>Не шутить над ребёнком (даже мягко) — риск статусного взрыва</li>
+                <li>Избегать быстрой смены планов и хаоса</li>
+            </ul>
+        </div>
+        <p style="margin-top: 8px;"><span class="dont">Нельзя:</span> сравнение, громкие коллективы и соревновательные секции, тренеры-«вожди», давление «ты должен», «будь лучшим», конкуренция с публичным проигрышем.</p>
+        <p><span class="do">Важно:</span> снять перегруз — приоритет №1; режим сна и отдых после спорта; мягкая среда без конкуренции.</p>
+    </section>
+
+    <!-- 5. ЧЕК-ЛИСТ РАЗВИТИЯ 6–9 ЛЕТ -->
+    <section>
+        <h2>5. Чек-лист развития ребёнка 6–9 лет</h2>
+        <p style="margin-bottom: 14px; color: var(--muted); font-size: 12px;">Переход от раннего школьного возраста к устойчивой учебной и личностной позиции.</p>
+
+        <h3 style="font-size: 0.95rem; margin: 12px 0 8px; color: var(--accent);">Цель периода 6–9 лет</h3>
+        <p style="font-size: 12px; color: var(--muted); margin-bottom: 6px;">Сформировать:</p>
+        <ul>
+            <li>устойчивое ощущение себя</li>
+            <li>базовую саморегуляцию</li>
+            <li>принятие роли ученика без утраты Я</li>
+            <li>сохранённый интерес к познанию</li>
+            <li>достаточную телесную и когнитивную работоспособность</li>
+        </ul>
+
+        <h3 style="font-size: 0.95rem; margin: 20px 0 8px; color: var(--green);">Этап 1. К 8 годам (6–8 лет)</h3>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">1. Самоощущение и Я-контур</h4>
+        <ul class="checklist">
+            <li>понимает, что ему нравится и не нравится</li>
+            <li>умеет формулировать желания</li>
+            <li>различает «я плохой» и «у меня не получилось»</li>
+            <li>не воспринимает ошибку как угрозу отношениям</li>
+        </ul>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">2. Саморегуляция</h4>
+        <ul class="checklist">
+            <li>выдерживает неинтересную задачу 10 минут</li>
+            <li>может остановиться по просьбе взрослого</li>
+            <li>после фрустрации восстанавливается за 5–10 минут</li>
+            <li>при перегрузе нуждается в дистанции, но возвращается в контакт</li>
+        </ul>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">3. Роль и обязанность</h4>
+        <ul class="checklist">
+            <li>понимает, что есть «надо», не зависящее от желания</li>
+            <li>различает роли: дома / школа / кружок</li>
+            <li>принимает рамку взрослого при сохранении выбора внутри</li>
+        </ul>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">4. Социальные навыки</h4>
+        <ul class="checklist">
+            <li>играет 1:1, возможны короткие групповые взаимодействия</li>
+            <li>может быть не лидером</li>
+            <li>принимает отказ без разрушения контакта</li>
+        </ul>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">5. Отношения с родителями</h4>
+        <ul class="checklist">
+            <li>родитель — источник безопасности</li>
+            <li>ребёнок приходит за поддержкой</li>
+            <li>после конфликта возможен контакт и восстановление</li>
+        </ul>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">6. Интерес и кругозор</h4>
+        <ul class="checklist">
+            <li>задаёт вопросы «почему / как»</li>
+            <li>способен увлечённо заниматься 20–30 минут</li>
+            <li>инициирует игры, проекты, разговоры</li>
+            <li>пересказывает и объясняет то, что узнал</li>
+        </ul>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">7. Телесное ощущение</h4>
+        <ul class="checklist">
+            <li>чувствует границы тела</li>
+            <li>ориентируется в пространстве</li>
+            <li>следует простым двигательным инструкциям</li>
+            <li>выдерживает физическую активность 30–40 минут с паузами</li>
+        </ul>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">8. Академическая база</h4>
+        <p style="font-size: 12px; color: var(--muted); margin: 6px 0 2px;"><strong>Математика</strong></p>
+        <ul class="checklist">
+            <li>счёт до 100</li>
+            <li>сложение/вычитание в пределах 20</li>
+            <li>простые логические задачи</li>
+        </ul>
+        <p style="font-size: 12px; color: var(--muted); margin: 6px 0 2px;"><strong>Язык (родной)</strong></p>
+        <ul class="checklist">
+            <li>читает короткие тексты</li>
+            <li>пересказывает смысл</li>
+            <li>пишет простые предложения</li>
+        </ul>
+        <p style="font-size: 12px; color: var(--muted); margin: 6px 0 2px;"><strong>Английский</strong></p>
+        <ul class="checklist">
+            <li>понимает простую речь на слух</li>
+            <li>базовая лексика (быт, действия, эмоции)</li>
+            <li>не боится говорить с ошибками</li>
+            <li>уровень: A0 → pre-A1</li>
+        </ul>
+
+        <h3 style="font-size: 0.95rem; margin: 24px 0 8px; color: var(--accent);">Этап 2. К 9 годам (8–9 лет)</h3>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">1. Самоощущение</h4>
+        <ul class="checklist">
+            <li>удерживает своё мнение без агрессии</li>
+            <li>способен признать ошибку</li>
+            <li>начинает осознавать сильные и слабые стороны</li>
+        </ul>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">2. Саморегуляция</h4>
+        <ul class="checklist">
+            <li>выдерживает задачу 15–25 минут</li>
+            <li>возвращается к деятельности после перерыва</li>
+            <li>использует слова вместо телесных реакций</li>
+        </ul>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">3. Роль и ответственность</h4>
+        <ul class="checklist">
+            <li>выполняет часть обязанностей без напоминаний</li>
+            <li>понимает последствия своих решений</li>
+            <li>принимает ограничения без тотального протеста</li>
+        </ul>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">4. Социальная зрелость</h4>
+        <ul class="checklist">
+            <li>устойчивые контакты со сверстниками</li>
+            <li>участие в группе 4–6 детей</li>
+            <li>способность восстанавливать отношения после конфликта</li>
+        </ul>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">5. Отношения с родителями</h4>
+        <ul class="checklist">
+            <li>сохраняет контакт при несогласии</li>
+            <li>способен обсуждать сложные темы</li>
+            <li>не путает границы и близость</li>
+        </ul>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">6. Интерес и познавательная активность</h4>
+        <ul class="checklist">
+            <li>углубляется в темы</li>
+            <li>возвращается к интересам через время</li>
+            <li>способен объяснять идеи другим</li>
+        </ul>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">7. Телесная регуляция</h4>
+        <ul class="checklist">
+            <li>более точные движения</li>
+            <li>лучший баланс</li>
+            <li>использует движение для саморегуляции</li>
+        </ul>
+        <h4 style="font-size: 0.85rem; margin: 12px 0 4px;">8. Академическая готовность</h4>
+        <p style="font-size: 12px; color: var(--muted); margin: 6px 0 2px;"><strong>Математика</strong></p>
+        <ul class="checklist">
+            <li>уверенная работа в пределах 100</li>
+            <li>решение текстовых задач</li>
+            <li>понимание закономерностей</li>
+        </ul>
+        <p style="font-size: 12px; color: var(--muted); margin: 6px 0 2px;"><strong>Язык</strong></p>
+        <ul class="checklist">
+            <li>осмысленное чтение</li>
+            <li>краткое письменное изложение мысли</li>
+        </ul>
+        <p style="font-size: 12px; color: var(--muted); margin: 6px 0 2px;"><strong>Английский</strong></p>
+        <ul class="checklist">
+            <li>простые диалоги</li>
+            <li>инструкции на английском</li>
+            <li>короткие рассказы о себе</li>
+            <li>уровень: pre-A1 → A1</li>
+        </ul>
+
+        <h3 style="font-size: 0.95rem; margin: 24px 0 8px; color: var(--green);">Ключевые индикаторы готовности к следующему уровню</h3>
+        <ul class="checklist">
+            <li>тело не мешает обучению</li>
+            <li>интерес сохранён</li>
+            <li>саморегуляция развивается</li>
+            <li>роль ученика принята без утраты Я</li>
+            <li>академика не вызывает избегание</li>
+            <li>английский воспринимается как инструмент, а не стресс</li>
+        </ul>
+    </section>
+
+    <p style="text-align: center; color: var(--muted); font-size: 12px; margin-top: 16px;">6–9 лет | Цель: база безопасности + готовность к англоязычной школе</p>
+
+</body>
+</html>
